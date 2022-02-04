@@ -17,4 +17,7 @@ const load = () => {
 app.whenReady().then(() => {
     load()
     win.loadFile('renderer/main.html')
+    app.on('activate', () => {
+        if (electron.BrowserWindow.getAllWindows().length === 0) load()
+    })
 })
