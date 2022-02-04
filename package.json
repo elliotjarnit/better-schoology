@@ -4,7 +4,7 @@
   "description": "A more modern electron driven schoology application ",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Swiftzerr/better-schoology/issues"
   },
-  "homepage": "https://github.com/Swiftzerr/better-schoology#readme"
+  "homepage": "https://github.com/Swiftzerr/better-schoology#readme",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  }
 }
