@@ -9,14 +9,17 @@ const loadPage = (page) => {
 let win
 const load = () => {
      win = new electron.BrowserWindow({
-        width: 800,
-        height: 600
+         minWidth: 1920,
+         minHeight: 1080,
+         width: 1920,
+         height: 1080
     })
 }
 
 app.whenReady().then(() => {
     load()
     win.loadFile('renderer/main.html')
+    win.setMenu(null)
     app.on('activate', () => {
         if (electron.BrowserWindow.getAllWindows().length === 0) load()
     })
