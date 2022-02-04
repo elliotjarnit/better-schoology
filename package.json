@@ -2,7 +2,7 @@
   "name": "better-schoology",
   "version": "1.0.0",
   "description": "A more modern electron driven schoology application ",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
