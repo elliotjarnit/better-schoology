@@ -8,6 +8,14 @@ let width, height
 const defaultconfig = {
     "schoology-private-key": "",
     "schoology-public-key": ""
+    "custom-domain": "default"
+}
+
+// COLORS
+
+const colors  = {
+    "primary": "#00B4D8",
+    "secondary": "#40434E",
 }
 
 // Pre Load
@@ -43,8 +51,6 @@ const openwindow = () => {
          height: height,
     })
     win.setBackgroundColor('#333')
-    win.blur()
-    win.focus()
 }
 
 // Runs When Ready
