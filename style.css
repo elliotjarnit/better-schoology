@@ -2,6 +2,10 @@ body, html {
     background-color: #333333;
 }
 
+.logo-text {
+    text-align: center;
+}
+
 .topbar {
     background-color: #333;
     overflow: hidden;

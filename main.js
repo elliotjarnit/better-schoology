@@ -2,6 +2,7 @@ const electron = require("electron");
 const store = require('electron-store');
 const Store = new store()
 let app = electron.app;
+let width, height
 
 // CONFIG
 const defaultconfig = {
@@ -14,12 +15,14 @@ const preload = () => {
     if (Store.get("config") == undefined) {
         Store.set("config", defaultconfig)
     }
+    height = electron.screen.getPrimaryDisplay().workAreaSize.height;
+    width = electron.screen.getPrimaryDisplay().workAreaSize.width;
 }
 
 
 // Helper functions
 const loadPage = (page) => {
-    win.loadFile('renderer/pages/' + page)
+    win.loadFile('renderer/pages/' + page + '.html')
 }
 const getConfig = (value) => {
     let current = Store.get("config")
@@ -34,10 +37,10 @@ const getConfig = (value) => {
 let win
 const openwindow = () => {
      win = new electron.BrowserWindow({
-         minWidth: 1920,
-         minHeight: 1080,
-         width: 1920,
-         height: 1080,
+         minWidth: Math.round(width * 0.9),
+         minHeight: Math.round(height * 0.9),
+         width: width,
+         height: height,
     })
     win.setBackgroundColor('#333')
     win.blur()
@@ -47,9 +50,11 @@ const openwindow = () => {
 // Runs When Ready
 app.whenReady().then(() => {
     preload()
+    console.log(width)
+    console.log(height)
     openwindow()
     if (getConfig("schoology-private-key") == "" || getConfig("schoology-public-key") == "") {
-        win.loadFile('renderer/main.html')
+        loadPage("login")
     }
     win.setMenu(null)
     app.on('activate', () => {
