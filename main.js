@@ -7,7 +7,7 @@ let width, height
 // CONFIG
 const defaultconfig = {
     "schoology-private-key": "",
-    "schoology-public-key": ""
+    "schoology-public-key": "",
     "custom-domain": "default"
 }
 
