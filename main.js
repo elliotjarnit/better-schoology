@@ -37,10 +37,9 @@ const openwindow = () => {
          minWidth: 1920,
          minHeight: 1080,
          width: 1920,
-         height: 1080
+         height: 1080,
     })
     win.setBackgroundColor('#333')
-    win.
     win.blur()
     win.focus()
 }
