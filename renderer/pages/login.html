@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css" />
     <title>Better Schoology | Login</title>
 </head>
+
+<div class="background"></div>
+
+<div class="wave">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,180,216,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,180,216,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,180,216,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(0,180,216,0.9)" />
+        </g>
+    </svg>
+</div>
+
 <body>
-    <strong class="logo-text">Better Schoology</strong>
+    <div class="logo-text">
+        <strong>Better Schoology</strong>
+        <p> Welcome to Better Schoology!
+            To begin, start by logging in.<br><br>
+        </p>
+        <div class="action">
+            <button class="action-button" aria-label="Click this if your School uses the default Schoology website and not a subdomain. https://schoology.com/" data-cooltipz-dir="bottom" data-cooltipz-size="large">Schoology Login</button>
+            <button class="action-button" aria-label="Click this if your School does not use the default Schoology website and uses a custom subdomain. https://<school>.schoology.com/" data-cooltipz-dir="bottom" data-cooltipz-size="large">SSO Login</button>
+        </div>
+    </div>
 </body>
 </html>

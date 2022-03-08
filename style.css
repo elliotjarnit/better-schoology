@@ -1,9 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css');
+
+:root {
+    --primary:#00B4D8;
+    --secondary:#40434E;
+    --third:#90E0EF;
+    --fourth:#CAF0F8;
+    --fifth:#A69CAC;
+}
+
 body, html {
-    background-color: #333333;
+    margin: 0;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 }
 
 .logo-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: white;
+    opacity: 0.9;
     text-align: center;
+}
+
+.action-button {
+    font-family: "DM Sans", sans-serif;
+    font: inherit;
+    border: 3px solid black;
+    font-size: 1.25rem;
+    padding: 1em;
+    width: 45%;
+    font-weight: 500;
+    background-color: var(--fifth);
+    border-radius: 6px;
+    color: white;
+    border: 0;
+}
+
+.action-button:hover {
+    color: var(--fifth);
+    cursor: pointer;
+    background-color: white;
+ }
+
+.logo-text strong {
+    color: black !important;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 50px;
+;
+}
+
+.logo-text p {
+    color: black;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 20px;
 }
 
 .topbar {
@@ -28,4 +90,45 @@ body, html {
 .topbar a.active {
     background-color: #04AA6D;
     color: white;
+}
+
+.waves {
+    position:absolute;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:300px;
+    max-height:350px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% {
+        transform: translate3d(85px,0,0);
+    }
 }
