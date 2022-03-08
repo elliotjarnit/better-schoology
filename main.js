@@ -45,6 +45,10 @@ const getConfig = (value) => {
 let win
 const openwindow = () => {
      win = new electron.BrowserWindow({
+         webPreferences: {
+             nodeIntegration: true,
+             contextIsolation: false
+         },
          minWidth: Math.round(width * 0.9),
          minHeight: Math.round(height * 0.9),
          width: width,
@@ -67,3 +71,5 @@ app.whenReady().then(() => {
         if (electron.BrowserWindow.getAllWindows().length === 0) load()
     })
 })
+
+module.exports = {win}
