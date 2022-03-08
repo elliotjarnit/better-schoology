@@ -38,21 +38,22 @@ body, html {
 .action-button {
     font-family: "DM Sans", sans-serif;
     font: inherit;
-    border: 3px solid black;
+    border-radius: 5px;
+    border: 3px solid var(--fifth);
     font-size: 1.25rem;
     padding: 1em;
     width: 45%;
     font-weight: 500;
-    background-color: var(--fifth);
-    border-radius: 6px;
-    color: white;
-    border: 0;
+    background-color: white;
+    color: var(--fifth);
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .action-button:hover {
-    color: var(--fifth);
+    color: white;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--fifth);
  }
 
 .logo-text strong {
