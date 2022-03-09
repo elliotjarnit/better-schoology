@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 :root {
     --primary:#00B4D8;
@@ -12,13 +13,21 @@
 
 body, html {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .background {
     width: 100%;
     height: 100%;
+    /*background-color: red;*/
     position: fixed;
     background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+
+.footer {
+    font-size: 13px;
+    color: rgb(117, 117, 117);
+    font-weight: 400;
 }
 
 .logo-text {
@@ -27,7 +36,7 @@ body, html {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 300px;
+    height: 280px;
     padding: 10px;
     border-radius: 25px;
     background-color: white;
@@ -36,7 +45,6 @@ body, html {
 }
 
 .action-button {
-    font-family: "DM Sans", sans-serif;
     font: inherit;
     border-radius: 5px;
     border: 3px solid var(--fifth);
@@ -60,12 +68,11 @@ body, html {
     color: black !important;
     font-family: 'Alfa Slab One', cursive;
     font-size: 50px;
-;
 }
 
-.logo-text p {
+.para {
+    margin-top: 15px;
     color: black;
-    font-family: 'Alfa Slab One', cursive;
     font-size: 20px;
 }
 

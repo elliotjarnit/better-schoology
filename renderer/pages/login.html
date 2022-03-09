@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css" />
     <title>Better Schoology | Login</title>
+    <script src="../js/login.js"></script>
 </head>
 
 <div class="background"></div>
@@ -23,27 +24,17 @@
         </g>
     </svg>
 </div>
-
-<body>
-    <script>
-        const app = require("../../main")
-
-
-        function btn1click() {
-            console.log("hi")
-            const app = require('../../main');
-            app.win.WebContents.open("https://app.schoology.com/login")
-        }
-    </script>
-    <div class="logo-text">
-        <strong>Better Schoology</strong>
-        <p> Welcome to Better Schoology!
-            To begin, start by logging in.<br><br>
-        </p>
-        <div class="action">
-            <button id="btn1" onclick="btn1click()" class="action-button" aria-label="Click this if your School uses the default Schoology website." data-cooltipz-dir="bottom" data-cooltipz-size="large">Schoology Login</button>
-            <button id="btn2" class="action-button" aria-label="Click this if your School uses a custom subdomain. Example: https://<school>.schoology.com/" data-cooltipz-dir="bottom" data-cooltipz-size="large">SSO Login</button>
+    <body>
+        <div class="logo-text">
+            <strong>Better Schoology</strong>
+            <p class="para"> Welcome to Better Schoology!<br>
+                To begin, start by logging in.<br><br>
+            </p>
+            <div class="action">
+                <button id="btn1" onclick="btn1click()" class="action-button" aria-label="Click this if your School uses the default Schoology website." data-cooltipz-dir="bottom" data-cooltipz-size="large">Schoology Login</button>
+                <button id="btn2" class="action-button" aria-label="Click this if your School uses a custom subdomain. Example: https://<school>.schoology.com/" data-cooltipz-dir="bottom" data-cooltipz-size="large">SSO Login</button>
+            </div>
+            <p class="footer">By signing in, you agree to Schoology's <a href="https://www.schoology.com/terms-of-use" class="footer" target="_blank">Terms of Service</a> and <a href="https://www.powerschool.com/privacy/#iv" class="footer" target="_blank">Privacy Policy</a></p>
         </div>
-    </div>
-</body>
+    </body>
 </html>

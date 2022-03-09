@@ -72,4 +72,4 @@ app.whenReady().then(() => {
     })
 })
 
-module.exports = {win}
+module.exports = {}
